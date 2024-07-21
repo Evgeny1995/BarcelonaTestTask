@@ -31,6 +31,17 @@
 		url('./assets/fonts/KievitPro-Bold.woff') format('woff');
 }
 
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src:
+		local('Roboto'),
+		local('Roboto'),
+		url('./assets/fonts/Roboto.woff2') format('woff2');
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;

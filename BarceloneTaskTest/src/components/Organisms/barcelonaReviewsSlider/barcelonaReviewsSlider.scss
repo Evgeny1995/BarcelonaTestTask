@@ -1,0 +1,27 @@
+.mySwiper {
+	margin-top: 21px;
+}
+
+.swiper_pagination_reviews_slider {
+	position: absolute;
+	display: flex;
+	gap: 14px;
+	align-items: center;
+	justify-content: right;
+	bottom: 14px !important;
+	z-index: 1;
+}
+
+.swiper-bullets-reviews-slider {
+	width: 4px;
+	height: 4px;
+	background-color: #212121;
+	border-radius: 100%;
+}
+
+.swiper-bullets-reviews-slider-active {
+	width: 8px;
+	height: 8px;
+	background-color: #ff4641;
+	border-radius: 100%;
+}
