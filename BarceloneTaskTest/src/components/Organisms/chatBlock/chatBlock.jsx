@@ -1,47 +1,21 @@
 import React from 'react'
 import styles from './chatBlock.module.scss'
 import BlockTitle from '../../Atoms/blockTitle/BlockTitle.jsx'
-import avatarImage1 from './../../../assets/images/png/avatar1.png'
-import avatarImage2 from './../../../assets/images/png/avatar2.png'
 import Chat from '../../Molecules/chat/chat.jsx'
-const ChatBlock = () => {
-	const chatsData = [
-		{
-			index: 1,
-			avatarImage: avatarImage1,
-			name: 'Наталия Полянская',
-			role: 'Гид по Баварии, фотограф',
-			historyMessage: [
-				'Из достопримечательностей могу предложить обратить внимание на вулкан Майон, путешествие запомнится вам надолго хотя бы из-за невероятной сложности подъема на него. Поверьте, это стоит того; также хотел бы отметить очень важную область исследования',
-				'Что из себя представляет вулкан? Просто хочу убедиться, что готова к такому путешествию.',
-				'Из достопримечательностей могу предложить обратить внимание на вулкан Майон, путешествие запомнится вам надолго хотя бы из-за невероятной сложности подъема на него. Поверьте, это стоит того; также хотел бы отметить очень важную область исследования'
-			]
-		},
-		{
-			index: 2,
-			avatarImage: avatarImage2,
-			name: 'Администратор',
-			role: 'TravelAsk',
-			historyMessage: [
-				'Из достопримечательностей могу предложить обратить внимание на вулкан Майон, путешествие запомнится вам надолго хотя бы из-за невероятной сложности подъема на него. Поверьте, это стоит того; также хотел бы отметить очень важную область исследования',
-				'Что из себя представляет вулкан? Просто хочу убедиться, что готова к такому путешествию.',
-				'Из достопримечательностей могу предложить обратить внимание на вулкан Майон, путешествие запомнится вам надолго хотя бы из-за невероятной сложности подъема на него. Поверьте, это стоит того; также хотел бы отметить очень важную область исследования'
-			]
-		}
-	]
 
+const ChatBlock = () => {
 	return (
 		<div className={styles.chat_wrap}>
 			<div className={styles.chat_user}>
 				<BlockTitle text={'Чат с пользователем'} />
-				<div>
-					<Chat chatsData={chatsData[0]} />
+				<div className={styles.chat_user_container}>
+					<Chat nameChat={'user'} />
 				</div>
 			</div>
 			<div className={styles.chat_admin}>
 				<BlockTitle text={'Чат с администратором'} />
-				<div>
-					<Chat chatsData={chatsData[1]} />
+				<div className={styles.chat_admin_container}>
+					<Chat nameChat={'admin'} />
 				</div>
 			</div>
 		</div>

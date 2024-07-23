@@ -1,0 +1,129 @@
+.chat_wrap {
+	background-color: #ffffff;
+}
+
+.chat_user_info {
+	display: flex;
+	gap: 19px;
+	padding: 26px;
+	border-bottom: 1px solid #ececec;
+}
+
+.user_info_avatar {
+}
+
+.user_info_text_container {
+}
+
+.user_info_name {
+	font-family: 'Kievit', 'serif';
+	font-size: 18px;
+	line-height: 17px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.user_info_role {
+	font-family: 'Kievit', 'serif';
+	font-size: 13px;
+	line-height: 17px;
+	color: #ff4641;
+	padding-left: 11px;
+	margin-top: 7px;
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 8px;
+		height: 10px;
+		top: 3px;
+		left: 0;
+		background: url('./../../../assets/images/svg/redFlagIcon.svg');
+	}
+}
+
+.publish_block {
+	display: flex;
+	align-items: center;
+	gap: 19px;
+	padding: 26px 19px 26px 26px;
+	border-top: 1px solid #ececec;
+}
+
+.publish_block_form {
+	display: flex;
+	gap: 15px;
+}
+
+.text_field_publish {
+	width: 270px;
+	height: 49px;
+	padding: 15px 0px 15px 24px;
+	border: 1px solid #ececec;
+	outline: none;
+	color: #a3a2a2;
+}
+
+.publish_btn {
+	background-color: inherit;
+	border: none;
+}
+
+.message_out_block_container {
+	padding: 0 13px;
+	height: 496px;
+	overflow-y: auto;
+
+	&::-webkit-scrollbar {
+		width: 3px;
+		height: 100%;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: #ff4641;
+		border-radius: 5px;
+	}
+}
+
+.message_item_container {
+	padding: 12px;
+	margin-top: 14px;
+	margin-bottom: 14px;
+}
+
+.backround_user {
+	background-color: #f9f7f2;
+}
+.message_item {
+	display: flex;
+	//align-items: top;
+}
+
+.message_item_avatar_block {
+	margin-right: 19px;
+}
+
+.message_item_avatar {
+}
+
+.message_item_text_block {
+}
+
+.message_item_text {
+	//max-width: 299px;
+	font-family: 'Kievit', 'serif';
+	font-size: 15px;
+	line-height: 24px;
+	color: #000000;
+	//overflow: hidden;
+	//text-overflow: ellipsis;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
+.message_item_date {
+	font-family: 'Roboto', 'serif';
+	font-size: 11px;
+	line-height: 25px;
+	color: #9d9d9d;
+}
