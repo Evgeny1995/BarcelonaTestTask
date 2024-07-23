@@ -1,10 +1,16 @@
 .review_slider_wrap {
-	margin-top: 20px;
 	background-color: #ffffff;
 	padding: 35px 10px;
+	max-width: 880px;
+	margin: 20px auto 0 auto;
 }
 
 .slider {
+}
+
+.slider_item_wrap {
+	display: flex !important;
+	justify-content: center !important;
 }
 
 .slider_item {

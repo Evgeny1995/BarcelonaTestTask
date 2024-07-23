@@ -14,155 +14,165 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import { Link } from 'react-router-dom'
+import DetailGallery from '../detailGallery/detailGallery.jsx'
 
+const sliderData = [
+	{
+		index: 1,
+		avatar: reviewerAvatar,
+		name: 'Наталия полянская',
+		city: 'БАРСЕЛОНА',
+		reviewText:
+			'Барселона – моя третья большая любовь, после Вены и Крита. Это город, в который я каждый раз возвращаюсь с огромным удовольствием, всем рекомендую хоть раз там побывать и осмотреть ...',
+		galleryImg: [
+			galleryImg1,
+			galleryImg2,
+			galleryImg3,
+			galleryImg3,
+			galleryImg1,
+			galleryImg2,
+			galleryImg3,
+			galleryImg3,
+			galleryImg1,
+			galleryImg2,
+			galleryImg3
+		],
+		reviewDate: 'около 1 года назад',
+		comments: '9',
+		likes: 9
+	},
+	{
+		index: 2,
+		avatar: reviewerAvatar,
+		name: 'Elena Bulgakova',
+		city: 'БАРСЕЛОНА',
+		reviewText:
+			'Барселона – моя третья большая любовь, после Вены и Крита. Это город, в который я каждый раз возвращаюсь с огромным удовольствием, всем рекомендую хоть раз там побывать и осмотреть ...',
+		galleryImg: [
+			galleryImg1,
+			galleryImg2,
+			galleryImg3,
+			galleryImg3,
+			galleryImg1,
+			galleryImg2,
+			galleryImg3,
+			galleryImg3,
+			galleryImg1,
+			galleryImg2,
+			galleryImg3
+		],
+		reviewDate: '5 месяцев назад',
+		comments: '3',
+		likes: 7
+	},
+	{
+		index: 3,
+		avatar: reviewerAvatar,
+		name: 'Наталия полянская',
+		city: 'БАРСЕЛОНА',
+		reviewText:
+			'Барселона – моя третья большая любовь, после Вены и Крита. Это город, в который я каждый раз возвращаюсь с огромным удовольствием, всем рекомендую хоть раз там побывать и осмотреть ...',
+		galleryImg: [
+			galleryImg1,
+			galleryImg2,
+			galleryImg3,
+			galleryImg3,
+			galleryImg1,
+			galleryImg2,
+			galleryImg3,
+			galleryImg3,
+			galleryImg1,
+			galleryImg2,
+			galleryImg3
+		],
+		reviewDate: 'около 1 года назад',
+		comments: '9',
+		likes: 9
+	},
+	{
+		index: 4,
+		avatar: reviewerAvatar,
+		name: 'Elena Bulgakova',
+		city: 'БАРСЕЛОНА',
+		reviewText:
+			'Барселона – моя третья большая любовь, после Вены и Крита. Это город, в который я каждый раз возвращаюсь с огромным удовольствием, всем рекомендую хоть раз там побывать и осмотреть ...',
+		galleryImg: [
+			galleryImg1,
+			galleryImg2,
+			galleryImg3,
+			galleryImg3,
+			galleryImg1,
+			galleryImg2,
+			galleryImg3,
+			galleryImg3,
+			galleryImg1,
+			galleryImg2,
+			galleryImg3
+		],
+		reviewDate: '5 месяцев назад',
+		comments: '3',
+		likes: 7
+	},
+	{
+		index: 5,
+		avatar: reviewerAvatar,
+		name: 'Наталия полянская',
+		city: 'БАРСЕЛОНА',
+		reviewText:
+			'Барселона – моя третья большая любовь, после Вены и Крита. Это город, в который я каждый раз возвращаюсь с огромным удовольствием, всем рекомендую хоть раз там побывать и осмотреть ...',
+		galleryImg: [
+			galleryImg1,
+			galleryImg2,
+			galleryImg3,
+			galleryImg3,
+			galleryImg1,
+			galleryImg2,
+			galleryImg3,
+			galleryImg3,
+			galleryImg1,
+			galleryImg2,
+			galleryImg3
+		],
+		reviewDate: 'около 1 года назад',
+		comments: '9',
+		likes: 9
+	},
+	{
+		index: 6,
+		avatar: reviewerAvatar,
+		name: 'Elena Bulgakova',
+		city: 'БАРСЕЛОНА',
+		reviewText:
+			'Барселона – моя третья большая любовь, после Вены и Крита. Это город, в который я каждый раз возвращаюсь с огромным удовольствием, всем рекомендую хоть раз там побывать и осмотреть ...',
+		galleryImg: [
+			galleryImg1,
+			galleryImg2,
+			galleryImg3,
+			galleryImg3,
+			galleryImg1,
+			galleryImg2,
+			galleryImg3,
+			galleryImg3,
+			galleryImg1,
+			galleryImg2,
+			galleryImg3
+		],
+		reviewDate: '5 месяцев назад',
+		comments: '3',
+		likes: 7
+	}
+]
 const BarcelonaReviewsSlider = () => {
 	const [countOfList, setCountOfList] = useState(4)
-	const sliderData = [
-		{
-			index: 1,
-			avatar: reviewerAvatar,
-			name: 'Наталия полянская',
-			city: 'БАРСЕЛОНА',
-			reviewText:
-				'Барселона – моя третья большая любовь, после Вены и Крита. Это город, в который я каждый раз возвращаюсь с огромным удовольствием, всем рекомендую хоть раз там побывать и осмотреть ...',
-			galleryImg: [
-				galleryImg1,
-				galleryImg2,
-				galleryImg3,
-				galleryImg3,
-				galleryImg1,
-				galleryImg2,
-				galleryImg3,
-				galleryImg3,
-				galleryImg1,
-				galleryImg2,
-				galleryImg3
-			],
-			reviewDate: 'около 1 года назад',
-			comments: '9',
-			likes: 9
-		},
-		{
-			index: 2,
-			avatar: reviewerAvatar,
-			name: 'Elena Bulgakova',
-			city: 'БАРСЕЛОНА',
-			reviewText:
-				'Барселона – моя третья большая любовь, после Вены и Крита. Это город, в который я каждый раз возвращаюсь с огромным удовольствием, всем рекомендую хоть раз там побывать и осмотреть ...',
-			galleryImg: [
-				galleryImg1,
-				galleryImg2,
-				galleryImg3,
-				galleryImg3,
-				galleryImg1,
-				galleryImg2,
-				galleryImg3,
-				galleryImg3,
-				galleryImg1,
-				galleryImg2,
-				galleryImg3
-			],
-			reviewDate: '5 месяцев назад',
-			comments: '3',
-			likes: 7
-		},
-		{
-			index: 3,
-			avatar: reviewerAvatar,
-			name: 'Наталия полянская',
-			city: 'БАРСЕЛОНА',
-			reviewText:
-				'Барселона – моя третья большая любовь, после Вены и Крита. Это город, в который я каждый раз возвращаюсь с огромным удовольствием, всем рекомендую хоть раз там побывать и осмотреть ...',
-			galleryImg: [
-				galleryImg1,
-				galleryImg2,
-				galleryImg3,
-				galleryImg3,
-				galleryImg1,
-				galleryImg2,
-				galleryImg3,
-				galleryImg3,
-				galleryImg1,
-				galleryImg2,
-				galleryImg3
-			],
-			reviewDate: 'около 1 года назад',
-			comments: '9',
-			likes: 9
-		},
-		{
-			index: 4,
-			avatar: reviewerAvatar,
-			name: 'Elena Bulgakova',
-			city: 'БАРСЕЛОНА',
-			reviewText:
-				'Барселона – моя третья большая любовь, после Вены и Крита. Это город, в который я каждый раз возвращаюсь с огромным удовольствием, всем рекомендую хоть раз там побывать и осмотреть ...',
-			galleryImg: [
-				galleryImg1,
-				galleryImg2,
-				galleryImg3,
-				galleryImg3,
-				galleryImg1,
-				galleryImg2,
-				galleryImg3,
-				galleryImg3,
-				galleryImg1,
-				galleryImg2,
-				galleryImg3
-			],
-			reviewDate: '5 месяцев назад',
-			comments: '3',
-			likes: 7
-		},
-		{
-			index: 5,
-			avatar: reviewerAvatar,
-			name: 'Наталия полянская',
-			city: 'БАРСЕЛОНА',
-			reviewText:
-				'Барселона – моя третья большая любовь, после Вены и Крита. Это город, в который я каждый раз возвращаюсь с огромным удовольствием, всем рекомендую хоть раз там побывать и осмотреть ...',
-			galleryImg: [
-				galleryImg1,
-				galleryImg2,
-				galleryImg3,
-				galleryImg3,
-				galleryImg1,
-				galleryImg2,
-				galleryImg3,
-				galleryImg3,
-				galleryImg1,
-				galleryImg2,
-				galleryImg3
-			],
-			reviewDate: 'около 1 года назад',
-			comments: '9',
-			likes: 9
-		},
-		{
-			index: 6,
-			avatar: reviewerAvatar,
-			name: 'Elena Bulgakova',
-			city: 'БАРСЕЛОНА',
-			reviewText:
-				'Барселона – моя третья большая любовь, после Вены и Крита. Это город, в который я каждый раз возвращаюсь с огромным удовольствием, всем рекомендую хоть раз там побывать и осмотреть ...',
-			galleryImg: [
-				galleryImg1,
-				galleryImg2,
-				galleryImg3,
-				galleryImg3,
-				galleryImg1,
-				galleryImg2,
-				galleryImg3,
-				galleryImg3,
-				galleryImg1,
-				galleryImg2,
-				galleryImg3
-			],
-			reviewDate: '5 месяцев назад',
-			comments: '3',
-			likes: 7
+
+	const [images, setImages] = useState(undefined)
+
+	const showGallery = (e, slide, setShowDetailGallery, showDetailGallery) => {
+		console.log(slide)
+		if (slide.index == e.target.id) {
+			setShowDetailGallery(!showDetailGallery)
 		}
-	]
+	}
 
 	return (
 		<div className={styles.review_slider_wrap}>
@@ -185,15 +195,6 @@ const BarcelonaReviewsSlider = () => {
 					},
 					880: {
 						slidesPerView: 2.6
-					},
-					1002: {
-						slidesPerView: 3
-					},
-					1322: {
-						slidesPerView: 4
-					},
-					1642: {
-						slidesPerView: 5
 					}
 				}}
 				pagination={{
@@ -207,7 +208,7 @@ const BarcelonaReviewsSlider = () => {
 				className='mySwiper'
 			>
 				{sliderData.map(slide => (
-					<SwiperSlide key={slide.index}>
+					<SwiperSlide className={styles.slider_item_wrap} key={slide.index}>
 						<div className={styles.slider_item}>
 							<div className={styles.reviewer_data}>
 								<img
@@ -225,7 +226,15 @@ const BarcelonaReviewsSlider = () => {
 							</div>
 							<div className={styles.review_gallery}>
 								{slide.galleryImg.slice(0, countOfList).map((img, index) => (
-									<img key={index} src={img} alt='Фото из отзыва' />
+									<img
+										onClick={() => {
+											setImages(slide.galleryImg)
+										}}
+										key={index}
+										id={index}
+										src={img}
+										alt='Фото из отзыва'
+									/>
 								))}
 								<div className={styles.gallery_overlay}>
 									<p className={styles.gallery_overlay_text}>
@@ -255,6 +264,14 @@ const BarcelonaReviewsSlider = () => {
 				</Link>
 				<div className='swiper_pagination_reviews_slider'></div>
 			</Swiper>
+			{images && (
+				<DetailGallery
+					images={images}
+					onClose={() => {
+						setImages(undefined)
+					}}
+				/>
+			)}
 		</div>
 	)
 }

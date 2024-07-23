@@ -1,12 +1,24 @@
 .chat_wrap {
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 880px;
+	margin: 50px auto 0 auto;
+	gap: 49px;
 }
 
 .chat_user {
-	width: 50%;
+	width: 415px;
 }
 
 .chat_admin {
-	width: 50%;
+	width: 415px;
+}
+
+.chat_user_container {
+	margin-top: 25px;
+}
+
+.chat_admin_container {
+	margin-top: 25px;
 }

@@ -3,24 +3,14 @@
 }
 
 .not_found_home_link {
-	display: block;
+	display: inline-block;
 	margin-top: 10px;
 	text-decoration: none;
 	color: #000000;
 	font-family: 'Kievit', 'serif';
 	font-weight: 400;
 	font-size: 40px;
-	position: relative;
-
-	&:before {
-		position: absolute;
-		content: '';
-		bottom: -6px;
-		left: 43.5%;
-		width: 203px;
-		height: 3px;
-		background-color: #ff4641;
-	}
+	border-bottom: 3px solid #ff4641;
 }
 
 .not_found_title {
